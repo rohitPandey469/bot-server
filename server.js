@@ -33,13 +33,13 @@ app.use("/answers", answerRoutes);
 app.use("/user",userRoutes)
 
 app.get("^/$|/index(.html)?", (req, res) => {
-  res.sendFile(path.join( "views", "index.html"));
+  res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
 app.all("*", (req, res) => {
   res.status(404);
   if (req.accepts("html")) {
-    res.sendFile(path.join( "views", "404.html"));
+    res.sendFile(path.join(__dirname, "views", "404.html"));
   } else if (req.accepts("json")) {
     res.json({ error: "404 Not Found" });
   } else {

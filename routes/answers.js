@@ -6,12 +6,12 @@ const router = express.Router();
 
 router.patch(
   "/post/:id",
-  //  auth,
+   auth,
   postAnswer
 );
 router.patch(
   "/delete/:id",
-  // auth,
+  auth,
   deleteAnswer
 );
 

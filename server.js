@@ -13,6 +13,11 @@ import mongoose from "mongoose";
 import questionsRoutes from "./routes/questions.js";
 import answerRoutes from "./routes/answers.js";
 import userRoutes from "./routes/userProfile.js"
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 
 const PORT = process.env.PORT || 5000;
 

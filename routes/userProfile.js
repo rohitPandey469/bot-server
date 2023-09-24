@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/getAllUsers",  getAllUsers);
 router.patch("/update/:id", 
-// auth, 
+auth, 
 updateProfile);
 
 export default router;

@@ -13,18 +13,18 @@ const router = express.Router();
 
 router.post(
   "/ask",
-  // auth,
+  auth,
   askQuestion
 );
 router.get("/get", getAllQuestions);
 router.delete(
   "/delete/:id",
-  //  auth,
+   auth,
   deleteQuestion
 );
 router.patch(
   "/vote/:id",
-  // auth,
+  auth,
   voteQuestion
 );
 
